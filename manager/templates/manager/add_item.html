@@ -1,0 +1,16 @@
+{% extends 'manager/main.html' %}
+
+{% include 'manager/nav.html' %}
+{% block content %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <div style="margin-left: 40px;">
+            <p style="margin-top: 20px; font-weight: bold;">Name:</p>{{ form.name }}
+            <p style="margin-top: 20px; font-weight: bold;">Description: </p>{{ form.description }}
+            <br><br><input type="submit" name="create">
+        </div>
+    </form>
+
+{% endblock %}

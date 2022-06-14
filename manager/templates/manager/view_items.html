@@ -1,0 +1,16 @@
+{% extends 'manager/main.html' %}
+
+{% include 'manager/nav.html' %}
+{% block content %}
+ 
+    {% for items in itemList %}
+    <div id="items" style="border: 2px solid black; margin: 90px; width: 50vw;">
+        <div style="margin: 20px; ">
+            <p> {{ items.name }} </p>
+            <p> {{ items.description }} </p>
+        </div>
+    </div>
+    {% endfor %}
+ 
+
+{% endblock %}
